@@ -1,0 +1,69 @@
+body {
+	margin:0 auto;
+	text-align:center;
+	background-image:url("http://www.ebertfest.com/blog/wp-content/uploads/2013/04/curtains.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:100%;
+}
+
+
+#intro {
+	display:relative;
+	color:#FFCC00;
+	margin-top:150px;
+}
+
+#play {
+	display:none;
+	color:gold;
+	background-image:url("http://images.wisegeek.com/empty-movie-theater.jpg");
+	background-repeat:no-repeat;
+	background-position:center; 
+	background-size:auto;
+	height:700px;
+	vertical-align: middle;
+}
+header {
+	font-family: 'Limelight', cursive;
+	font-size:3em;
+}
+p {
+	font-family:georgia, sans-serif;
+	font-size:1em;
+	line-height:1.5em;
+}
+.button {
+	border-radius:20px;
+	padding:10px;
+	background-color:white;
+	color:red;
+	font-family: 'Limelight', cursive;
+	font-size:1em;
+}
+#rules {
+	width:600px;
+	text-align:center;
+	margin:0 auto;
+	padding:70px;
+	font-size:30px;
+	color:#990000;
+}
+#click {
+	font-size:15px;
+	color:#FFCC00;
+}
+#showTime {
+	margin-top:10px;
+}
+a:link {
+	text-decoration:none;
+	color:green;
+}
+a:hover {
+	color:black;
+	text-decoration:underline;
+}
+#questions {
+	display:none;
+}
