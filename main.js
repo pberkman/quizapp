@@ -6,5 +6,6 @@ $(document).ready(function() {
 	$("#showTime").on("click", function() {
 		$("#rules").hide();
 		$("#q1Wrapper").show();
+		$("#ticket1").addClass("questionIndicator");
 	})
 })

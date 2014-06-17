@@ -91,6 +91,9 @@ a:hover {
 #q5Wrapper {
 	display:none;
 }
+li {
+	display:inline-block;
+}
 
 /*Ticket Counter*/
 ul {
@@ -103,9 +106,20 @@ ul {
 
 }
 .ticketList {
-	display:inline-block;
 	top:380px;
 	list-style:none;
 	position:relative;
 	right:20px;
+}
+/*---tracks what question the user is on through jQuery addClass---*/
+.questionIndicator {
+	opacity: 0.4;
+} 
+.qwrapper {
+	padding-top:150px;
+}
+.qwrapper p {
+	font-family:font-family: 'Calligraffitti', cursive;
+	color:black;
+	font-size: 1.5em;
 }
