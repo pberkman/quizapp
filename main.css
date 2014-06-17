@@ -7,13 +7,33 @@ body {
 	height:100%;
 }
 
+/*---intro page---*/
 
 #intro {
 	display:relative;
 	color:#FFCC00;
 	margin-top:150px;
 }
+.topHeader {
+	font-family: 'Limelight', cursive;
+	font-size:50px;
+	color:#FFCC00;
+	font-variant: 
+}
+.introContent {
+	padding:10px;
+}
 
+p { 
+	font-family:georgia, sans-serif;
+	font-size:1em;
+	line-height:1.5em;
+	width:600px;
+	text-align:center;
+	margin:0 auto;
+}
+
+/*---play section---*/
 #play {
 	display:none;
 	color:gold;
@@ -22,17 +42,8 @@ body {
 	background-position:center; 
 	background-size:auto;
 	height:700px;
-	vertical-align: middle;
 }
-header {
-	font-family: 'Limelight', cursive;
-	font-size:3em;
-}
-p {
-	font-family:georgia, sans-serif;
-	font-size:1em;
-	line-height:1.5em;
-}
+
 .button {
 	border-radius:20px;
 	padding:10px;
@@ -41,17 +52,15 @@ p {
 	font-family: 'Limelight', cursive;
 	font-size:1em;
 }
+/*---the rules page...before it gets into questions---*/
 #rules {
-	width:600px;
-	text-align:center;
-	margin:0 auto;
 	padding:70px;
 	font-size:30px;
 	color:#990000;
 }
-#click {
-	font-size:15px;
-	color:#FFCC00;
+.rulesContent {
+	line-height:1.5em;
+	padding:10px 0 10px 0;
 }
 #showTime {
 	margin-top:10px;
@@ -64,6 +73,39 @@ a:hover {
 	color:black;
 	text-decoration:underline;
 }
-#questions {
+
+/*---Questions area---*/
+
+#q1Wrapper {
 	display:none;
+}
+#q2Wrapper {
+	display:none;
+}
+#q3Wrapper {
+	display:none;
+}
+#q4Wrapper {
+	display:none;
+}
+#q5Wrapper {
+	display:none;
+}
+
+/*Ticket Counter*/
+ul {
+	list-style:none;
+	
+}
+.ticket {
+	width:100px;
+	padding:0 12px 0 12px;
+
+}
+.ticketList {
+	display:inline-block;
+	top:380px;
+	list-style:none;
+	position:relative;
+	right:20px;
 }

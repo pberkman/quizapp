@@ -11,33 +11,81 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </head>
-<body class="openCurtain">
+<body>
 	<div id="container">
+<!--Intro Section-->
 	  <section id="intro">
-		  <header>The Movie Synopsis Quiz</header>
-		  <p>Do you know a movie by its IMDB synopsis?</p>
-		  <p>Take the quiz to find out!</p>
+		  <header class="topHeader">The Movie Synopsis Quiz</header>
+		  <p class="introContent">Do you know a movie by its IMDB synopsis?</p>
+		  <p class="introContent">Take the quiz to find out!</p>
 		  <button id="action" class="button">ACTION!</button>
 	  </section>
+<!--Instruction Section-->
 	  <section id="play">
-		  <header>How to play</header>
-		  <div id="rules">
-		  	<p>You will be given a synopsis from <a href="http://www.imdb.com/">IMDB.com</a> for 5 different movies. From the options that appear, select which movie you think the synopsis is describing.</p>
-		    <p id="click">Click on "It's Show Time" below to start</p>
-		   </div>
-		  <button id="showTime" class="button">It's Show Time!</button>
-	  </section>
-	  <section id="questions">
-	  	<div class="qs">
-		  <p>A group of kids set out on an adventure in search of pirate treasure that could save their homes from foreclosure.</p>
+	  	 <div id="rules" class="movieScreen">
+		    <header class="topHeader">How to play</header>
+		  	<p class="rulesContent">You will be given a synopsis from <a href="http://www.imdb.com/">IMDB.com</a> for 5 different movies. From the options that appear, select which movie you think the synopsis is describing.</p>
+		    <button id="showTime" class="button" title="Click here to start">It's Show Time!</button>
 		 </div>
-		 <div>
-		 	<span>1</span>
-		 	<span>2</span>
-		 	<span>3</span>
-		 	<span>4</span>
-		 	<span>5</span>
-		 </div>
+
+<!--question section-->
+	  	<div id="questions" class="movieScreen">
+		  <div id="q1Wrapper" class="qwrapper">Question 1:
+		  	<p id="Q-1">A group of kids set out on an adventure in search of pirate treasure that could save their homes from foreclosure.</p>
+		  	<ul>
+		  		<li></li>
+		  		<li></li>
+				<li></li>
+			</ul>
+		  </div>
+		<div id="q2Wrapper" class="qwrapper">Question 2:
+		  <p id="Q-2"></p>
+		  	<ul>
+		  		<li></li>
+		  		<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div id="q3Wrapper" class="qwrapper">Question 3:
+		  <p id="Q-3"></p>
+		  	<ul>
+		  		<li></li>
+		  		<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div id="q4Wrapper" class="qwrapper">Question 4:
+		  <p id="Q-4"></p>
+		  	<ul>
+		  		<li></li>
+		  		<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div id="q5Wrapper" class="qwrapper">Question 5:
+		  <p id="Q-5"></p>
+		  	<ul>
+		  		<li></li>
+		  		<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+<!--Counter section-->
+		<div id="ticketContainer">
+		  <ul>
+		  	<li class="ticketList"><img src="images/blankticket1.png" id="ticket1" class="ticket"/></li>
+			<li class="ticketList"><img src="images/blankticket2.png" id="ticket2" class="ticket"/>
+			</li>
+			<li class="ticketList"><img src="images/blankticket3.png" id="ticket3" class="ticket"/>
+			</li >
+			<li class="ticketList"><img src="images/blankticket4.png" id="ticket4" class="ticket"/>
+			</li>
+			<li class="ticketList"><img src="images/blankticket5.png" id="ticket5" class="ticket"/>
+			</li>
+		  </ul>
+		</div>
+		</div>
 	  </section>
 	 </div>
 </body>

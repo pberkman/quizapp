@@ -1,7 +1,10 @@
 $(document).ready(function() {
-	$("button").on ("click", function() {
-	
+	$("#action").on ("click", function() {
 		$("#intro").hide();
 		$("#play").show();
+	})
+	$("#showTime").on("click", function() {
+		$("#rules").hide();
+		$("#q1Wrapper").show();
 	})
 })
