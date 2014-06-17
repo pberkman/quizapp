@@ -98,28 +98,50 @@ li {
 /*Ticket Counter*/
 ul {
 	list-style:none;
-	
-}
-.ticket {
-	width:100px;
-	padding:0 12px 0 12px;
 
 }
-.ticketList {
-	top:380px;
-	list-style:none;
+#ticketUL {
+	outline:2px solid green;
 	position:relative;
-	right:20px;
+}
+.ticketImg {
+	width:100px;
+	padding:0 12px 0 12px;
+}
+.ticketList {
+	position:absolute;
+	bottom:100px;
 }
 /*---tracks what question the user is on through jQuery addClass---*/
 .questionIndicator {
 	opacity: 0.4;
 } 
+
+/*---question area---*/
 .qwrapper {
-	padding-top:150px;
+	padding-top:90px;
+	font-family: 'Limelight', cursive;
+	font-size:45px;
 }
 .qwrapper p {
-	font-family:font-family: 'Calligraffitti', cursive;
+	font-family:'Calligraffitti', cursive;
 	color:black;
-	font-size: 1.5em;
+	font-size: 30px;
+}
+.answers {
+	position:relative;
+	padding:10px;
+	margin:0 10px 0 10px;
+	color:black;
+	font-size:15px;
+	font-family:georgia, sans-serif;
+	border:2px ridge #FFCC00;
+	border-radius:20px;
+	right:20px;
+	width:150px;
+	background:linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-webkit-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-o-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-ms-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-moz-linear-gradient(45deg,#FFCC00,#CC9900);
 }
