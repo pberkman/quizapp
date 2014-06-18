@@ -25,30 +25,37 @@ body {
 }
 
 p { 
-	font-family:georgia, sans-serif;
-	font-size:1em;
-	line-height:1.5em;
+	line-height:1em;
 	width:600px;
 	text-align:center;
 	margin:0 auto;
+	font-family: 'Archivo Narrow', sans-serif;
+	color:black;
+	font-size: 30px;
 }
 
 /*---play section---*/
 #play {
-	display:none;
-	color:gold;
+	position:relative;
 	background-image:url("http://images.wisegeek.com/empty-movie-theater.jpg");
 	background-repeat:no-repeat;
 	background-position:center; 
 	background-size:auto;
-	height:700px;
+	display:none;
+	height:640px;
+	color:gold;
+	min-width:500px;
 }
 
-.button {
+.button { /*all buttons*/
 	border-radius:20px;
 	padding:10px;
-	background-color:white;
-	color:red;
+	background:linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-webkit-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-o-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-ms-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-moz-linear-gradient(45deg,#FFCC00,#CC9900);
+	color:black;
 	font-family: 'Limelight', cursive;
 	font-size:1em;
 }
@@ -62,7 +69,7 @@ p {
 	line-height:1.5em;
 	padding:10px 0 10px 0;
 }
-#showTime {
+#showTime { /*the show time button*/
 	margin-top:10px;
 }
 a:link {
@@ -96,21 +103,28 @@ li {
 }
 
 /*Ticket Counter*/
+
+#ticketContainer {
+	position:fixed;
+	bottom:50px;
+	height:100px;
+	text-align:center;
+	margin-top:-100px;
+	width:100%;
+}
 ul {
 	list-style:none;
 
 }
-#ticketUL {
-	outline:2px solid green;
-	position:relative;
-}
+
 .ticketImg {
 	width:100px;
 	padding:0 12px 0 12px;
 }
 .ticketList {
-	position:absolute;
+	position:relative;
 	bottom:100px;
+	right:20px;
 }
 /*---tracks what question the user is on through jQuery addClass---*/
 .questionIndicator {
@@ -123,12 +137,8 @@ ul {
 	font-family: 'Limelight', cursive;
 	font-size:45px;
 }
-.qwrapper p {
-	font-family:'Calligraffitti', cursive;
-	color:black;
-	font-size: 30px;
-}
-.answers {
+
+.answers li {
 	position:relative;
 	padding:10px;
 	margin:0 10px 0 10px;
@@ -144,4 +154,5 @@ ul {
 	background:-o-linear-gradient(45deg,#FFCC00,#CC9900);
 	background:-ms-linear-gradient(45deg,#FFCC00,#CC9900);
 	background:-moz-linear-gradient(45deg,#FFCC00,#CC9900);
+
 }
