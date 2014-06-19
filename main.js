@@ -4,13 +4,18 @@ $(document).ready(function() {
 		$("#play").fadeIn("slow");
 	})
 	$("#showTime").on("click", function() {
-		$("#movieScreen").show();
+	/*	$("#movieScreen").show();
 		$("#rules").hide();
 		$("#q4Wrapper").show();
 		$("#ticketContainer").show();
 		$("#ticket1").addClass("questionIndicator");
-	})
-})
+  })
+  $(".answers>li").mouseenter(function() {
+    $(this).toggleClass("answerClick");
+  });*/
+  $("#wrongAnswer").show();
+   });
+});
 
 /*---Questions Objects---*/
 
