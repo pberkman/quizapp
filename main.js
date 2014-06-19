@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$("#play").fadeIn("slow");
 	})
 	$("#showTime").on("click", function() {
-	/*	$("#movieScreen").show();
+		$("#movieScreen").show();
 		$("#rules").hide();
 		$("#q4Wrapper").show();
 		$("#ticketContainer").show();
@@ -12,9 +12,9 @@ $(document).ready(function() {
   })
   $(".answers>li").mouseenter(function() {
     $(this).toggleClass("answerClick");
-  });*/
-  $("#wrongAnswer").show();
-   });
+  });
+ /* $("#wrongAnswer").show();
+   });*/
 });
 
 /*---Questions Objects---*/
