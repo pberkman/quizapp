@@ -115,7 +115,6 @@ li {
 }
 ul {
 	list-style:none;
-
 }
 
 .ticketImg {
@@ -157,7 +156,7 @@ ul {
 	cursor:pointer;
 
 }
-.answer>li:hover {
+.answer li:hover {
 	color:red;
 	background:linear-gradient(45deg,#FFCC00,#996600);
 	background:-webkit-linear-gradient(45deg,#FFCC00,#996600);

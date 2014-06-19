@@ -44,3 +44,5 @@ function questionFive () {
   movie=["Aliens", "Independence Day", "War of the Worlds"];
   ca="Independence Day";
 }
+/*
+for(x in questionOne)*/
