@@ -28,69 +28,35 @@
 		  	<p class="rulesContent">You will be given a synopsis from <a href="http://www.imdb.com/">IMDB.com</a> for 5 different movies. From the options that appear, select which movie you think the synopsis is describing.</p>
 		    <button id="showTime" class="button" title="Click here to start">It's Show Time!</button>
 		 </div>
-		
+
 <!--question section-->
-	  	<div id="questions" class="movieScreen">
-		  <div id="q1Wrapper" class="qwrapper">Question 1:
-		  	<p id="Q-1"></p>
-		  	<ul class="answers">
-		  		<li></li>
-		  		<li></li>
-				<li></li>
-			</ul>
-		  </div>
-		  <div id="q2Wrapper" class="qwrapper">Question 2:
-		    <p id="Q-2"></p>
-		  	<ul class="answers">
-		  	    <li></li>
-		  		<li></li>
-				<li></li>
-			</ul>
-		  </div>
-		  <div id="q3Wrapper" class="qwrapper">Question 3:
-		  <p id="Q-3"></p>
-		  	<ul class="answers">
-		  		<li></li>
-		  		<li></li>
-				<li></li>
-			</ul>
-		  </div>
-		  <div id="q4Wrapper" class="qwrapper">Question 4:
-		  <p id="Q-4">A wealthy New York investment banking executive hides his alternate psychopathic ego from his co-workers and friends as he escalates deeper into his illogical, gratuitous fantasies.</p>
-		  	<ul class="answers">
-		  		<li>American Psyco</li>
-		  		<li>Wolf of Wallstreet</li>
-				<li>Wallstreet</li>
-			</ul>
-		  </div>
-		  <div id="q5Wrapper" class="qwrapper">Question 5:
-		  <p id="Q-5"></p>
-		  	<ul class="answers">
-		  		<li></li>
-		  		<li></li>
-				<li></li>
-			</ul>
-		  </div>
+
+		  <div id="q1Wrapper" class="qwrapper">Question <span id="qNum"></span>:
+		  	<p id="synopsis"></p>
+		  	<input type="radio" class="answers" value="0"><span class="style" id="movie1"></span>
+		  	<input type="radio" class="answers" value="1"><span class="style" id="movie2"></span>
+		  	<input type="radio" class="answers" value="2"><span class="style" id="movie3"></span>
+		  	<input type="submit" id="submit"/>
 		  </div>
 	  </div>
 <!--Counter section-->
 		<div id="ticketContainer">
 		  <ul id="ticketUL">
-		  	<li class="ticketList"><img src="images/blankticket1.png" id="ticket1" class="ticketImg" alt="ticket for question 1"/></li>
-			<li class="ticketList"><img src="images/blankticket2.png" id="ticket2" class="ticketImg" alt="ticket for question 1"/>
+		  	<li class="ticketList questionIndicator"><img src="images/blankticket1.png" id="ticket1" class="ticketImg" alt="ticket for question 1"/></li>
+			<li class="ticketList questionIndicator"><img src="images/blankticket2.png" id="ticket2" class="ticketImg" alt="ticket for question 1"/>
 			</li>
-			<li class="ticketList"><img src="images/blankticket3.png" id="ticket3" class="ticketImg" alt="ticket for question 1"/>
+			<li class="ticketList questionIndicator"><img src="images/blankticket3.png" id="ticket3" class="ticketImg" alt="ticket for question 1"/>
 			</li >
-			<li class="ticketList"><img src="images/blankticket4.png" id="ticket4" class="ticketImg" alt="ticket for question 1"/>
+			<li class="ticketList questionIndicator"><img src="images/blankticket4.png" id="ticket4" class="ticketImg" alt="ticket for question 1"/>
 			</li>
-			<li class="ticketList"><img src="images/blankticket5.png" id="ticket5" class="ticketImg" alt="ticket for question 1"/>
+			<li class="ticketList questionIndicator"><img src="images/blankticket5.png" id="ticket5" class="ticketImg" alt="ticket for question 1"/>
 			</li>
 		  </ul>
 		</div>
-		
+
 	 </section>
 	</div>
-	
+
 	<section id="rightAnswer">
 		<header class="topHeader otherHeader">Bravo!</header>
 		<p class="bravoOrBummer">You are Correct!</p>

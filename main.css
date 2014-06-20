@@ -32,8 +32,11 @@ p {
 	font-family: 'Archivo Narrow', sans-serif;
 	color:black;
 	font-size: 30px;
+	padding-bottom:20px;
 }
-
+#intro p {
+	color:#999999;
+}
 /*---play section---*/
 #play {
 	position:relative;
@@ -43,7 +46,7 @@ p {
 	background-size:auto;
 	display:none;
 	height:640px;
-	color:gold;
+	color:#FFCC00;
 	min-width:500px;
 }
 
@@ -87,22 +90,27 @@ a:hover {
 #q1Wrapper {
 	display:none;
 }
-#q2Wrapper {
-	display:none;
+#qNum {
+	font-size:45px;
 }
-#q3Wrapper {
-	display:none;
+#submit {
+	display:block;
+	margin:0 auto;
 }
-#q4Wrapper {
-	display:none;
-}
-#q5Wrapper {
-	display:none;
-}
-li {
-	display:inline-block;
+.qwrapper {
+	padding-top:90px;
+	font-family: 'Limelight', cursive;
+	font-size:45px;
 }
 
+.style {
+	padding:10px 10px 10px 10px;
+	font-size:20px;
+	font-family:georgia, sans-serif;
+}
+#submit {
+	margin-top:10px;
+}
 /*Ticket Counter*/
 
 #ticketContainer {
@@ -123,6 +131,7 @@ ul {
 }
 .ticketList {
 	position:relative;
+	display:inline-block;
 	right:20px;
 }
 /*---tracks what question the user is on through jQuery addClass---*/
@@ -130,40 +139,7 @@ ul {
 	opacity: 0.4;
 } 
 
-/*---question area---*/
-.qwrapper {
-	padding-top:90px;
-	font-family: 'Limelight', cursive;
-	font-size:45px;
-}
 
-.answers li {
-	position:relative;
-	padding:10px;
-	margin:0 10px 0 10px;
-	color:black;
-	font-size:15px;
-	font-family:georgia, sans-serif;
-	border:2px ridge #FFCC00;
-	border-radius:20px;
-	right:20px;
-	width:150px;
-	background:linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-webkit-linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-o-linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-ms-linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-moz-linear-gradient(45deg,#FFCC00,#CC9900);
-	cursor:pointer;
-
-}
-.answer li:hover {
-	color:red;
-	background:linear-gradient(45deg,#FFCC00,#996600);
-	background:-webkit-linear-gradient(45deg,#FFCC00,#996600);
-	background:-o-linear-gradient(45deg,#FFCC00,#996600);
-	background:-ms-linear-gradient(45deg,#FFCC00,#996600);
-	background:-moz-linear-gradient(45deg,#FFCC00,#996600);
-}
 
 /*---Answer is correct window---*/
 #rightAnswer, #wrongAnswer {
