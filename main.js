@@ -67,7 +67,6 @@ $("#submit").click(function() {
 
 });
 
-
   $("#action").on ("click", function() {
     $("#intro").hide();
     $("#play").fadeIn("slow");

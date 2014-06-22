@@ -139,8 +139,6 @@ ul {
 	opacity: 0.4;
 } 
 
-
-
 /*---Answer is correct window---*/
 #rightAnswer, #wrongAnswer {
 	position:absolute;
