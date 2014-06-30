@@ -140,7 +140,7 @@ ul {
 } 
 
 /*---Answer is correct window---*/
-#rightAnswer, #wrongAnswer {
+#rightAnswer, #wrongAnswer, #endScore{
 	position:absolute;
 	display:none;
 	top:50px;
