@@ -1,13 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Movie Synopsis Quiz!</title>
-	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<link type="text/css" rel="stylesheet" href="main.css">
 	<!--fonts-->
-	<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Limelight" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </head>
@@ -25,51 +24,55 @@
 	  	<div id="wrapNoFoot">
 	  	 <div id="rules">
 		    <header class="topHeader">How to play</header>
-		  	<p class="rulesContent">You will be given a synopsis from <a href="http://www.imdb.com/">IMDB.com</a> for 5 different movies. From the options that appear, select which movie you think the synopsis is describing.</p>
+		  	<p class="rulesContent">You will be given a synopsis from <a target="_blank" title="Open in new tab" href="http://www.imdb.com/">IMDB.com</a> for 5 different movies. From the options that appear, select which movie you think the synopsis is describing.</p>
 		    <button id="showTime" class="button" title="Click here to start">It's Show Time!</button>
 		 </div>
-
+		
 <!--question section-->
 
 		  <div id="q1Wrapper" class="qwrapper">Question <span id="qNum"></span>:
 		  	<p id="synopsis"></p>
-		  	<input type="radio" class="answers" value="0"><span class="style" id="movie1"></span>
-		  	<input type="radio" class="answers" value="1"><span class="style" id="movie2"></span>
-		  	<input type="radio" class="answers" value="2"><span class="style" id="movie3"></span>
-		  	<input type="submit" id="submit"/>
+		  	<input type="radio" class="answers" value="0" id="movie1" name="answers">
+		  	    <label for="movie1" id="movie1Label"></label>
+		  	<input type="radio" class="answers" value="1" id="movie2" name="answers">
+		  	    <label for="movie2" id="movie2Label"></label>
+		    <input type="radio" class="answers" value="2" id="movie3" name="answers">	
+		  	    <label for="movie3" id="movie3Label"></label>   
+		  	<button class="button" id="submit">Submit</button>
 		  </div>
 	  </div>
 <!--Counter section-->
 		<div id="ticketContainer">
 		  <ul id="ticketUL">
-		  	<li class="ticketList questionIndicator"><img src="images/blankticket1.png" id="ticket1" class="ticketImg" alt="ticket for question 1"/></li>
-			<li class="ticketList questionIndicator"><img src="images/blankticket2.png" id="ticket2" class="ticketImg" alt="ticket for question 1"/>
+		  	<li data-id="1" id="ticket1" class="ticketList"><img src="images/blankticket1.png" class="ticketImg" alt="ticket for question 1"></li>
+			<li data-id="2" class="ticketList questionIndicator"><img src="images/blankticket2.png" id="ticket2" class="ticketImg" alt="ticket for question 2">
 			</li>
-			<li class="ticketList questionIndicator"><img src="images/blankticket3.png" id="ticket3" class="ticketImg" alt="ticket for question 1"/>
-			</li >
-			<li class="ticketList questionIndicator"><img src="images/blankticket4.png" id="ticket4" class="ticketImg" alt="ticket for question 1"/>
+			<li data-id="3" class="ticketList questionIndicator"><img src="images/blankticket3.png" id="ticket3" class="ticketImg" alt="ticket for question 3">
 			</li>
-			<li class="ticketList questionIndicator"><img src="images/blankticket5.png" id="ticket5" class="ticketImg" alt="ticket for question 1"/>
+			<li data-id="4" class="ticketList questionIndicator"><img src="images/blankticket4.png" id="ticket4" class="ticketImg" alt="ticket for question 4">
+			</li>
+			<li data-id="5" class="ticketList questionIndicator"><img src="images/blankticket5.png" id="ticket5" class="ticketImg" alt="ticket for question 5">
 			</li>
 		  </ul>
 		</div>
 	 </section>
 	</div>
-
-	<section id="rightAnswer">
+	
+	<section id="rightAnswer" class="popUps" style="display: none;">
 		<header class="topHeader otherHeader">Bravo!</header>
 		<p class="bravoOrBummer">You are Correct!</p>
 		<button id="continue" class="button continueButton">Continue</button>
 	</section>
-	<section id="wrongAnswer">
+	<section id="wrongAnswer" class="popUps" style="display: none;">
 		<header class="topHeader otherHeader">Bummer</header>
 		<p class="bravoOrBummer">That's not it</p>
 		<button class="button continueButton">Continue</button>
 	</section>
-	<section id="endScore">
-		<header class="topHeader otherHeader">Score</header>
-		<p class="bravoOrBummer">You scored <span id="score"></span> out of 5!</p>
-		<button class="button continueButton" id="newGame">Play Again</button>
+	<section id="gameOver" class="popUps">
+		<header class="topHeader otherHeader">The End</header>
+		<p>You got <span class="endScore"></span> out of 5 correct!</p>
+		<button id="retake" class="button continueButton">Re-take the Quiz</button>
+	</section>
+
 
 </body>
-</html>
