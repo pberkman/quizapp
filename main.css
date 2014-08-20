@@ -1,3 +1,6 @@
+html {
+	height:100%;
+}
 body {
 	position:relative;
 	margin:0 auto;
@@ -5,26 +8,22 @@ body {
 	background-image:url("http://www.ebertfest.com/blog/wp-content/uploads/2013/04/curtains.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
-	height:100%;
 }
-
-/*---intro page---*/
-
-#intro {
-	display:relative;
-	color:#FFCC00;
-	margin-top:150px;
-}
-.topHeader {
-	font-family: 'Limelight', cursive;
-	font-size:50px;
-	color:#FFCC00;
-}
-.introContent {
+.button { /*all buttons*/
+	border-radius:20px;
 	padding:10px;
+	background:linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-webkit-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-o-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-ms-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-moz-linear-gradient(45deg,#FFCC00,#CC9900);
+	background:-webkit-gradient(45deg,#FFCC00,#CC9900);
+	color:black;
+	font-family: 'Limelight', cursive;
+	font-size:1em;
+	cursor:pointer;
 }
-
-p { 
+p { /* all paragraphs - initial style */
 	line-height:1em;
 	width:600px;
 	text-align:center;
@@ -34,38 +33,38 @@ p {
 	font-size: 30px;
 	padding-bottom:20px;
 }
-#intro p {
+.topHeader {
+	font-family: 'Limelight', cursive;
+	font-size:50px;
+	color:#FFCC00;
+}
+
+/*---intro page---*/
+#intro {
+	position:relative;
+	margin-top:150px;
+}
+.introContent {
+	padding:10px;
 	color:#999999;
 }
+
 /*---play section---*/
 #play {
 	position:relative;
 	background-image:url("http://images.wisegeek.com/empty-movie-theater.jpg");
 	background-repeat:no-repeat;
-	background-position:center; 
-	background-size:auto;
+	background-position:center center; 
+	background-size: auto;
 	display:none;
 	height:640px;
 	color:#FFCC00;
 	min-width:500px;
 }
 
-.button { /*all buttons*/
-	border-radius:20px;
-	padding:10px;
-	background:linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-webkit-linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-o-linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-ms-linear-gradient(45deg,#FFCC00,#CC9900);
-	background:-moz-linear-gradient(45deg,#FFCC00,#CC9900);
-	color:black;
-	font-family: 'Limelight', cursive;
-	font-size:1em;
-	cursor:pointer;
-}
 /*---the rules page...before it gets into questions---*/
 #rules {
-	padding:70px;
+	padding:90px 70px 70px 70px;
 	font-size:30px;
 	color:#990000;
 }
@@ -76,9 +75,10 @@ p {
 #showTime { /*the show time button*/
 	margin-top:10px;
 }
+/*Link characteristics to IMBD.com on the rules page*/
 a:link {
 	text-decoration:none;
-	color:green;
+	color:maroon;
 }
 a:hover {
 	color:black;
@@ -86,33 +86,32 @@ a:hover {
 }
 
 /*---Questions area---*/
-
-#q1Wrapper {
-	display:none;
-}
-#qNum {
-	font-size:45px;
-}
-#submit {
-	display:block;
-	margin:0 auto;
-}
 .qwrapper {
-	padding-top:90px;
-	font-family: 'Limelight', cursive;
+	display:none;
+	padding-top:110px;
+    font-family:'Limelight', cursive;
 	font-size:45px;
 }
-
-.style {
-	padding:10px 10px 10px 10px;
+label {
+	padding:0 15px 0 0;
 	font-size:20px;
 	font-family:georgia, sans-serif;
+	margin-right:0;
 }
-#submit {
-	margin-top:10px;
+label, input {
+	position:relative;
+	bottom:20px;
 }
-/*Ticket Counter*/
 
+#submit {
+	display:block;
+	position:relative;
+	margin:0 auto;
+	bottom:10px;
+	font-size: 15px;
+}
+
+/*Ticket Counter*/
 #ticketContainer {
 	position:fixed;
 	top:500px;
@@ -124,46 +123,53 @@ a:hover {
 ul {
 	list-style:none;
 }
-
 .ticketImg {
-	width:100px;
-	padding:0 12px 0 12px;
+	width:100px;	
 }
 .ticketList {
 	position:relative;
 	display:inline-block;
 	right:20px;
 }
+
 /*---tracks what question the user is on through jQuery addClass---*/
 .questionIndicator {
 	opacity: 0.4;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=50);
+	-moz-opacity:0.4;
+	-khtml-opacity:0.4;
 } 
 
-/*---Answer is correct window---*/
-#rightAnswer, #wrongAnswer, #endScore{
+/*---Answer is correct/wrong windows---*/
+.popUps {
 	position:absolute;
+	text-align:center;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 	display:none;
-	top:50px;
-	left:330px;
-	width:700px;
-	height:350px;
-	background:linear-gradient(45deg,#EEEEEE,#FFFFFF);
-	background:-webkit-linear-gradient(45deg,#EEEEEE,#FFFFFF);
-	background:-o-linear-gradient(45deg,#EEEEEE,#FFFFFF);
-	background:-ms-linear-gradient(45deg,#EEEEEE,#FFFFFF);
-	background:-moz-linear-gradient(25deg,#EEEEEE,#FFFFFF);
-	border-radius:10px;
+	top:80px;
+	width:710px;
+	min-width:600px;
+	height:330px;
+	background-color: white;
 }
 .otherHeader {
-	padding:top:15px;
 	font-size:80px;
 }
-.bravoOrBummer {
+.bravoOrBummer { /*wrong/right popUp paragraphs*/
 	font-size:50px;
-	width:122px;
-	padding:15px 0 15px 0;
+	width:150px;
 }
 .continueButton {
 	position:relative;
-	bottom:0px;
+	bottom:0;
+}
+#gameOver {
+	display:none;
+}
+#gameOver header {
+	padding-top:40px;
 }
